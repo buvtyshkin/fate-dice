@@ -1,0 +1,26 @@
+/* Not hidden on narrow screens: unlike an indicator, this is the control itself. */
+#leftSendForm > #fate_dice_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--bottomFormBlockSize) * 0.8);
+    height: var(--bottomFormBlockSize);
+    font-size: 1.1em;
+    opacity: 0.45;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.15s, color 0.15s;
+}
+#leftSendForm > #fate_dice_button:hover { opacity: 0.8; }
+#leftSendForm > #fate_dice_button.fate-armed {
+    color: #e2c46b;
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(226, 196, 107, 0.7);
+}
+
+.fate-settings label { display: block; margin-top: 8px; }
+.fate-settings label.checkbox_label { display: flex; }
+.fate-settings .text_pole { width: 100%; }
+.fate-settings textarea { resize: vertical; }
+.fate-settings small { display: block; opacity: 0.8; }
+.fate-settings .fate-hint { color: #e2c46b; opacity: 1; }
